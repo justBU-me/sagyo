@@ -1,1 +1,9 @@
-/swap/*  https://justbu.me/sagyo/:splat  200
+/sagyo/*  https://justbu.me/sagyo/:splat  200
+/login  https://justbu.me/login  200
+/chat_list  https://justbu.me/chat_list  200
+/chat  https://justbu.me/chat  200
+/notification  https://justbu.me/notification  200
+/profile  https://justbu.me/profile  200
+/setting  https://justbu.me/setting  200
+
+/profile/*  https://justbu.me/profile/:splat  200
