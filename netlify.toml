@@ -1,0 +1,75 @@
+# netlify.toml 파일 설정
+
+[build]
+  publish = "/"
+  command = ""
+
+# 사교 메인 페이지 및 하위 경로 리디렉션
+[[redirects]]
+  from = "/"
+  to = "https://justbu.me/sagyo"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sagyo"
+  to = "https://justbu.me/sagyo"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sagyo/*"
+  to = "https://justbu.me/sagyo/:splat"
+  status = 200
+  force = true
+
+# 프로필 페이지와 하위 경로
+[[redirects]]
+  from = "/profile"
+  to = "https://justbu.me/profile"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/profile/*"
+  to = "https://justbu.me/profile/:splat"
+  status = 200
+  force = true
+
+# 채팅 페이지와 하위 경로
+[[redirects]]
+  from = "/chat"
+  to = "https://justbu.me/chat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chat/*"
+  to = "https://justbu.me/chat/:splat"
+  status = 200
+  force = true
+
+# 기타 페이지 (로그인, 알림, 설정 등)
+[[redirects]]
+  from = "/login"
+  to = "https://justbu.me/login"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chat_list"
+  to = "https://justbu.me/chat_list"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/notification"
+  to = "https://justbu.me/notification"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/setting"
+  to = "https://justbu.me/setting"
+  status = 200
+  force = true
