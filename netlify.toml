@@ -1,7 +1,6 @@
-# netlify.toml
 [build]
-  publish = "public"  # 또는 실제 정적 파일이 있는 디렉토리
-  command = ""        # 빌드 커맨드가 필요없다면 비워두세요
+  publish = "./"  # 루트 디렉토리를 publish 디렉토리로 설정
+  command = ""    # 빌드 커맨드가 필요없으므로 비워둡니다
 
 # 기본 리디렉션 (모든 경로에 대한 폴백)
 [[redirects]]
@@ -10,7 +9,6 @@
   status = 301
   force = true
 
-# 특정 경로에 대한 리디렉션
 [[redirects]]
   from = "/profile/*"
   to = "https://justbu.me/profile/:splat"
