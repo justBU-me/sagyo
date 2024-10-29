@@ -1,75 +1,48 @@
-# netlify.toml 파일 설정
-
+# netlify.toml
 [build]
-  publish = "/"
-  command = ""
+  publish = "public"  # 또는 실제 정적 파일이 있는 디렉토리
+  command = ""        # 빌드 커맨드가 필요없다면 비워두세요
 
-# 사교 메인 페이지 및 하위 경로 리디렉션
+# 기본 리디렉션 (모든 경로에 대한 폴백)
 [[redirects]]
-  from = "/"
-  to = "https://justbu.me/sagyo"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/sagyo"
-  to = "https://justbu.me/sagyo"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/sagyo/*"
+  from = "/*"
   to = "https://justbu.me/sagyo/:splat"
-  status = 200
+  status = 301
   force = true
 
-# 프로필 페이지와 하위 경로
-[[redirects]]
-  from = "/profile"
-  to = "https://justbu.me/profile"
-  status = 200
-  force = true
-
+# 특정 경로에 대한 리디렉션
 [[redirects]]
   from = "/profile/*"
   to = "https://justbu.me/profile/:splat"
-  status = 200
-  force = true
-
-# 채팅 페이지와 하위 경로
-[[redirects]]
-  from = "/chat"
-  to = "https://justbu.me/chat"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/chat/*"
   to = "https://justbu.me/chat/:splat"
-  status = 200
+  status = 301
   force = true
 
-# 기타 페이지 (로그인, 알림, 설정 등)
 [[redirects]]
   from = "/login"
   to = "https://justbu.me/login"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/chat_list"
   to = "https://justbu.me/chat_list"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/notification"
   to = "https://justbu.me/notification"
-  status = 200
+  status = 301
   force = true
 
 [[redirects]]
   from = "/setting"
   to = "https://justbu.me/setting"
-  status = 200
+  status = 301
   force = true
